@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 style="text-align: center;">Loan Calculator</h1>
+  <div class="calculator-container">
+    <form (ngSubmit)="calculateLoan()" #loanForm="ngForm">
+      <mat-form-field>
+        <mat-label>Loan Amount ($)</mat-label>
+        <input matInput type="text" id="loanAmount" name="loanAmount" [(ngModel)]="loanAmount" required>
+      </mat-form-field> <br/>
+      <mat-form-field>
+        <mat-label>Interest Rate (%)</mat-label>
+        <input matInput type="text" id="interestRate" name="interestRate" step="0.01" [(ngModel)]="interestRate" required>
+      </mat-form-field> <br/>
+      <mat-form-field>
+        <mat-label>Number of Years</mat-label>
+        <input matInput type="text" id="loanTerm" name="loanTerm" [(ngModel)]="loanTerm" required>
+      </mat-form-field> <br/>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!loanForm.form.valid">Calculate</button>
+    </form>
+
+    <div id="error-message" *ngIf="errorMessage">
+      <p class="warn">{{ errorMessage }}</p>
+    </div>
+
+    <div class="results" id="results" *ngIf="showResults">
+      <h2>Loan Summary</h2>
+      <p class="results-header">Monthly Payment: <br/><span>${{ monthlyPayment | number:'1.2-2' }}</span></p>
+      <p class="results-header">Total Interest Paid: <br/><span>${{ totalInterest | number:'1.2-2' }}</span></p>
+    </div>
+  </div>
+
+
+</div>

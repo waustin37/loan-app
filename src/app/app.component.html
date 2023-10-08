@@ -1,0 +1,30 @@
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row>
+    <div class="logo">
+      <img src="./assets/logo.png" height="80" />
+    </div>
+    <div style="width: 80%;">
+      <div fxLayout="row wrap" fxLayoutAlign="end-start" style="float: right;">
+        <button mat-button routerLink="/calculator">Home</button>
+        <button mat-button routerLink="/contact">Contact</button>
+        <button mat-button routerLink="/about">About</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<div fxLayout="row wrap">
+<div fxFlex>
+  <mat-card class="main-container">
+
+
+    <mat-card-content>
+      <br/><br/>
+      <router-outlet></router-outlet>
+    </mat-card-content>
+
+  </mat-card>
+</div>
+</div>

@@ -1,0 +1,28 @@
+.card-container{
+  width: 70%;
+  margin: auto auto;
+  border: 1pt solid black;
+  padding: 20px;
+  background-color: #f5ea97;
+}
+.material-symbols-outlined {
+  margin-top: 20px;
+  font-size: 48px;
+  height: 45px;
+  width: 45px;
+  margin-left: 45%;
+}
+.mat-card {
+  border-radius: 25px;
+  border: .5pt solid black;
+  transition: box-shadow .3s;
+  width: 70%;
+  margin:auto auto;
+  margin-top: 50pt;
+  background-color: #fff1c6;
+  padding-bottom: 50px;
+}
+.mat-card:hover{
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  cursor: pointer;
+}
